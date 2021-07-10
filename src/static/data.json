@@ -1,0 +1,554 @@
+[
+    {
+        "name" : "Rantasauna",
+        "name_en" : "Rantasauna",
+        "description" : "Rantasaunan terassi",
+        "description_en" : "The terrace of Rantasauna",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : false,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.839418,
+                60.188165
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 311,
+                "height" : "very high"
+            },
+            {
+                "lower" : 312,
+                "upper" : 353,
+                "height" : "high"
+            },
+            {
+                "lower" : 354,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "JMT 5 Mäki",
+        "name_en" : "JMT 5 Hill",
+        "description" : "Jämeräntaival 5 vireinen mäki",
+        "description_en" : "The hill on the side of Jämeräntaival 5",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.838203,
+                60.187920
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 295,
+                "height" : "very high"
+            },
+            {
+                "lower" : 296,
+                "upper" : 317,
+                "height" : "high"
+            },
+            {
+                "lower" : 318,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "Kylän olohuone",
+        "name_en" : "Living Room of Teekkari Village",
+        "description" : "Kylän olohuoneen ulkogrilli",
+        "description_en" : "Grill outside at the living room",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : false,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.837838,
+                60.187718
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 226,
+                "height" : "very high"
+            },
+            {
+                "lower" : 227,
+                "upper" : 290,
+                "height" : "high"
+            },
+            {
+                "lower" : 291,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "Otaranta",
+        "name_en" : "Otaranta",
+        "description" : "Yleinen Otarannan alue",
+        "description_en" : "General area around Otaranta",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.837944,
+                60.185674
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 5,
+                "height" : "high"
+            },
+            {
+                "lower" : 6,
+                "upper" : 14,
+                "height" : "medium"
+            },
+            {
+                "lower" : 15,
+                "upper" : 165,
+                "height" : "low"
+            },
+            {
+                "lower" : 166,
+                "upper" : 329,
+                "height" : "medium"
+            },
+            {
+                "lower" : 330,
+                "upper" : 360,
+                "height" : "high"
+            }
+        ]
+    },
+    {
+        "name" : "Täffän terassi",
+        "name_en" : "Täffä terrace",
+        "description" : "Terassi Täffän edessä",
+        "description_en" : "Terrance in front of Täffä",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.833148,
+                60.186251
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 219,
+                "height" : "very high"
+            },
+            {
+                "lower" : 220,
+                "upper" : 240,
+                "height" : "medium"
+            },
+            {
+                "lower" : 241,
+                "upper" : 290,
+                "height" : "high"
+            },
+            {
+                "lower" : 291,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "AYY Terassi",
+        "name_en" : "AYY terrace",
+        "description" : "Terassi AYY:n toimiston edessä",
+        "description_en" : "Terrance in front of AYY office",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.830066,
+                60.184633
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 149,
+                "height" : "high"
+            },
+            {
+                "lower" : 150,
+                "upper" : 300,
+                "height" : "low"
+            },
+            {
+                "lower" : 301,
+                "upper" : 360,
+                "height" : "high"
+            }
+        ]
+    },
+    {
+        "name" : "AK Terassi",
+        "name_en" : "AK terrace",
+        "description" : "Arkkitehtikillan terassi",
+        "description_en" : "Guild of Architecture terrance",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.826662,
+                60.185083
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 139,
+                "height" : "high"
+            },
+            {
+                "lower" : 140,
+                "upper" : 175,
+                "height" : "low"
+            },
+            {
+                "lower" : 176,
+                "upper" : 200,
+                "height" : "high"
+            },
+            {
+                "lower" : 201,
+                "upper" : 300,
+                "height" : "medium"
+            },
+            {
+                "lower" : 301,
+                "upper" : 360,
+                "height" : "high"
+            }
+        ]
+    },
+    {
+        "name" : "Konemiehen ranta",
+        "name_en" : "Machine man beach",
+        "description" : "Rantapaikka Konemiehentien vieressä",
+        "description_en" : "Waterside close to Konemiehentie",
+        "features": {
+            "hasChairs" : false,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.823511,
+                60.188980
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 234,
+                "height" : "very high"
+            },
+            {
+                "lower" : 235,
+                "upper" : 350,
+                "height" : "very low"
+            },
+            {
+                "lower" : 351,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "Läntinen rantakallio",
+        "name_en" : "Western cliff",
+        "description" : "Läntinen rantakallio YTHS:n takana",
+        "description_en" : "Western cliff behind the YTHS building",
+        "features": {
+            "hasChairs" : false,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.830831,
+                60.191674
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 209,
+                "height" : "very high"
+            },
+            {
+                "lower" : 210,
+                "upper" : 250,
+                "height" : "high"
+            },
+            {
+                "lower" : 251,
+                "upper" : 340,
+                "height" : "very low"
+            },
+            {
+                "lower" : 341,
+                "upper" : 360,
+                "height" : "very high"
+            }
+        ]
+    },
+    {
+        "name" : "Pohjoinen rantakallio",
+        "name_en" : "Northern cliff",
+        "description" : "Pohjoinen rantakallio YTHS:n takana",
+        "description_en" : "Northern cliff behind the YTHS building",
+        "features": {
+            "hasChairs" : false,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.832396,
+                60.191996
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 64,
+                "height" : "very low"
+            },
+            {
+                "lower" : 65,
+                "upper" : 104,
+                "height" : "medium"
+            },
+            {
+                "lower" : 105,
+                "upper" : 250,
+                "height" : "high"
+            },
+            {
+                "lower" : 251,
+                "upper" : 360,
+                "height" : "very low"
+            }
+        ]
+    },
+    {
+        "name" : "Niemenkärki",
+        "name_en" : "Tip of Otaniemi",
+        "description" : "Pohjoisin niemenkärki",
+        "description_en" : "Northern tip of Otaniemi",
+        "features": {
+            "hasChairs" : false,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.837998,
+                60.193144
+              ]
+            }
+        },
+        "obstacles" : [
+            {
+                "lower" : 0,
+                "upper" : 154,
+                "height" : "very low"
+            },
+            {
+                "lower" : 155,
+                "upper" : 245,
+                "height" : "high"
+            },
+            {
+                "lower" : 246,
+                "upper" : 360,
+                "height" : "very low"
+            }
+        ]
+    },
+    {
+        "name" : "Smökki ylägrilli",
+        "name_en" : "Upper grill at Smökki",
+        "description" : "Ylempi grilliterassi Smökillä",
+        "description_en" : "Upper terrance with a grill at Smökki",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.836852,
+                60.188191
+              ]
+            }
+        }
+    },
+    {
+        "name" : "Smökki alagrilli",
+        "name_en" : "Lower grill at Smökki",
+        "description" : "Alempi grilli ja pöytä Smökillä",
+        "description_en" : "Lower grill with a table at Smökki",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.836269,
+                60.188027
+              ]
+            }
+        }
+    },
+    {
+        "name" : "Smökki alagrilli",
+        "name_en" : "Lower grill at Smökki",
+        "description" : "Alempi grilli ja pöytä Smökillä",
+        "description_en" : "Lower grill with a table at Smökki",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : true,
+            "hasGrill" : true
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.836269,
+                60.188027
+              ]
+            }
+        }
+    },
+    {
+        "name" : "JMT 7 tuolit",
+        "name_en" : "Chairs at JMT 7",
+        "description" : "Tuolit JMT 7 viereisellä sisäpihalla",
+        "description_en" : "Set of chairs right next to JMT 7",
+        "features": {
+            "hasChairs" : true,
+            "hasTables" : false,
+            "hasGrill" : false
+        },
+        "location" : {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                24.838654,
+                60.188534
+              ]
+            }
+        }
+    }
+]
