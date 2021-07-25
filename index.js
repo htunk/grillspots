@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import mapboxgl from 'mapbox-gl'
+import data from './static/data.json'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFsbGl0dW5ra2kiLCJhIjoiY2tnM2xrdDJrMGJ5czJ3a3ozMzdtc2pteiJ9.m7nIrU606unNfKVqxB63ag';
+let map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/hallitunkki/ckquv6kmh0v5l17s2cnegjnmw',
+  center: [24.830, 60.186],
+  maxZoom: 20,
+  minZoom: 14.75,
+  zoom: 1.5
+})
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const parseData = () => {
+  data.forEach(spot => {
+    spot.sunny = true //TODO: Actual sun analysis
+    //Create markers
+    const markerEl = document.createElement('div')
+    markerEl.className = 'marker'
+    markerEl.style.width = '5px'
+    markerEl.style.height = '5px'
+    markerEl.style.backgroundColor = 'red'
+    markerEl.addEventListener('click', onClick = () => {
+      map.easeTo({
+        center: spot.location.geometry.coordinates,
+        essential: true
+      });
+    })
+    new mapboxgl.Marker(markerEl).setLngLat(spot.location.geometry.coordinates)
+      .addTo(map)
+
+  })
+}
+
+
+parseData()
