@@ -6,7 +6,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "react-spring-bottom-sheet": "^3.4.0"
+    "react-spring-bottom-sheet": "^3.4.0",
+    "suncalc": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",

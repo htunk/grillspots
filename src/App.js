@@ -1,7 +1,8 @@
 import React from 'react';
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Map from './Map';
 import { BottomSheet } from 'react-spring-bottom-sheet'
+import { SheetHeader, SheetContent } from './SheetContent'
 
 function App() {
   const [open, setOpen] = useState(false)
@@ -11,9 +12,9 @@ function App() {
     setOpen(false)
   }
 
-  const openSheet = (props) => {
+  const openSheet = ( content ) => {
+    setSheetContent(content)
     setOpen(true)
-    setSheetContent({})
   }
 
   return (
@@ -24,15 +25,12 @@ function App() {
         snapPoints={({ headerHeight, minHeight }) => [headerHeight, minHeight]}
         defaultSnap={({ headerHeight }) => headerHeight }
         header={
-          <h1>Nauraa nauraa nauraa</h1>
+          <SheetHeader content={sheetContent} />
         }
       >
-        <p>Asdasdasdasdasd</p>
-        <p>Asdasdasdasdasd</p>
-        <p>Asdasdasdasdasd</p>
-        <p>Asdasdasdasdasd</p>
+        <SheetContent content={sheetContent} />
       </BottomSheet>
-      <Map setOpen={setOpen} />
+      <Map openSheet={openSheet} />
       
     </div>
   );

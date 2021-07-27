@@ -1,8 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
+import addWeatherInfo from './weather';
 import './Map.css';
+
 import markerNight from './assets/grill-icon-night.png';
+import markerRain from './assets/grill-icon-rain.png';
+import markerShade from './assets/grill-icon-shade.png';
+import markerSun from './assets/grill-icon-sun.png';
+import markerUndefined from './assets/grill-icon-undefined.png';
 
 mapboxgl.accessToken =
 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
@@ -33,7 +39,7 @@ const Map = ( props ) => {
 
     parseData({
       map: map,
-      setOpen: props.setOpen
+      openSheet: props.openSheet
     })
 
     // Clean up on unmount
@@ -48,15 +54,30 @@ const Map = ( props ) => {
 const Marker = ( props ) => {
   const markerOnClick = () => {
     props.map.easeTo({
-      center: props.coordinates,
+      center: props.spot.location.geometry.coordinates,
       essential: true
     });
-    props.setOpen(true)
+    props.openSheet(props.spot)
+  }
+
+  const selectMarker = () => {
+    switch(props.spot.weather) {
+      case 'sunny':
+        return markerSun
+      case 'rain':
+        return markerRain
+      case 'shade':
+        return markerShade
+      case 'night':
+        return markerNight
+      default:
+        return markerUndefined
+    }
   }
   
   return (
     <button className="asd" onClick={markerOnClick}>
-      <img className="map-marker-icon" src={markerNight} />
+      <img className="map-marker-icon" alt="Marker" src={selectMarker()} />
     </button>
   )
 }
@@ -65,12 +86,14 @@ const parseData = ( args ) => {
   const data = require('./data.json');
   console.log(data)
   data.forEach(spot => {
+    //spot.weather = "shade" //TODO: Real analysis
+    addWeatherInfo(spot)
     const markerEl = document.createElement('div')
     markerEl.className = 'map-marker'
 
     ReactDOM.render(<Marker map={args.map} 
-                            setOpen={args.setOpen}
-                            coordinates={spot.location.geometry.coordinates}/>, markerEl)
+                            openSheet={args.openSheet}
+                            spot={spot}/>, markerEl)
     new mapboxgl.Marker(markerEl).setLngLat(spot.location.geometry.coordinates).addTo(args.map)
   })
 }
