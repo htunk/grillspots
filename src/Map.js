@@ -5,7 +5,7 @@ import './Map.css';
 import markerNight from './assets/grill-icon-night.png';
 
 mapboxgl.accessToken =
-  'pk.eyJ1IjoiaGFsbGl0dW5ra2kiLCJhIjoiY2tnM2xrdDJrMGJ5czJ3a3ozMzdtc2pteiJ9.m7nIrU606unNfKVqxB63ag';
+'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
 
 const Map = ( props ) => {
   const mapContainerRef = useRef(null);
@@ -18,7 +18,7 @@ const Map = ( props ) => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/hallitunkki/ckquv6kmh0v5l17s2cnegjnmw',
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],
       zoom: zoom,
       maxZoom: 20,
