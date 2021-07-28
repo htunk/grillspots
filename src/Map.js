@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import addWeatherInfo from './weather';
 import './Map.css';
+import data from './data.json'
 
-import markerNight from './assets/grill-icon-night.png';
-import markerRain from './assets/grill-icon-rain.png';
-import markerShade from './assets/grill-icon-shade.png';
-import markerSun from './assets/grill-icon-sun.png';
-import markerUndefined from './assets/grill-icon-undefined.png';
+import markerNight from './assets/markers/grill-icon-night.png';
+import markerRain from './assets/markers/grill-icon-rain.png';
+import markerShade from './assets/markers/grill-icon-shade.png';
+import markerSun from './assets/markers/grill-icon-sun.png';
+import markerUndefined from './assets/markers/grill-icon-undefined.png';
 
 mapboxgl.accessToken =
 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
@@ -83,10 +84,8 @@ const Marker = ( props ) => {
 }
 
 const parseData = ( args ) => {
-  const data = require('./data.json');
   console.log(data)
   data.forEach(spot => {
-    //spot.weather = "shade" //TODO: Real analysis
     addWeatherInfo(spot)
     const markerEl = document.createElement('div')
     markerEl.className = 'map-marker'
