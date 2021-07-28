@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "09530ecd74cbbb1469273bcef7365ca7",
+    "revision": "a9e505423dcca69b3df79892b1a9989a",
     "url": "/grillspots/index.html"
   },
   {
-    "revision": "b6b20fa29f3c410305d8",
-    "url": "/grillspots/static/css/main.a5842c08.chunk.css"
+    "revision": "81d1512adcde505d712b",
+    "url": "/grillspots/static/css/main.c799ad38.chunk.css"
   },
   {
     "revision": "b5ceadd2b79771d55fac",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grillspots/static/js/2.4fb2976e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b6b20fa29f3c410305d8",
+    "revision": "81d1512adcde505d712b",
     "url": "/grillspots/static/js/main.e719c798.chunk.js"
   },
   {
