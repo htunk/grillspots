@@ -35,14 +35,16 @@ const addWeatherInfo = ( spot ) => {
                                             spot.location.geometry.coordinates[1], 
                                             spot.location.geometry.coordinates[0]);
 
-    const azimuth = (sunPosition.azimuth + Math.PI /* <- S to N azimuth */) * 180 / Math.PI
+    const azimuth = Math.round((sunPosition.azimuth + Math.PI /* <- S to N azimuth */) * 180 / Math.PI)
     const altitude = sunPosition.altitude * 180 / Math.PI
 
+    console.log(`Azimuth: ${azimuth}`)
     const currentHeight = spot.obstacles.find(i => {
         return (azimuth >= i.lower && azimuth <= i.upper)
-    }).height
+    })
+    const heightStr = currentHeight.height
 
-    altitude > obstacleHeights[currentHeight] ? 
+    altitude > obstacleHeights[heightStr] ? 
     spot.weather = 'sunny' :
     spot.weather = 'shade'
 }
