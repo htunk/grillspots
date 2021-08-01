@@ -81,6 +81,7 @@ code {
 
 .sheet-content-route div {
   width: max-content;
+  height: max-content;
   margin: 22px auto 30px auto;
   display: flex;
   background-color: #1dbcda;
