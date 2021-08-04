@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/grillspots/static/css/main.c799ad38.chunk.css",
-    "main.js": "/grillspots/static/js/main.e719c798.chunk.js",
-    "main.js.map": "/grillspots/static/js/main.e719c798.chunk.js.map",
+    "main.js": "/grillspots/static/js/main.dd245743.chunk.js",
+    "main.js.map": "/grillspots/static/js/main.dd245743.chunk.js.map",
     "runtime-main.js": "/grillspots/static/js/runtime-main.aa4d0fdb.js",
     "runtime-main.js.map": "/grillspots/static/js/runtime-main.aa4d0fdb.js.map",
     "static/js/2.4fb2976e.chunk.js": "/grillspots/static/js/2.4fb2976e.chunk.js",
     "static/js/2.4fb2976e.chunk.js.map": "/grillspots/static/js/2.4fb2976e.chunk.js.map",
     "index.html": "/grillspots/index.html",
-    "precache-manifest.fa2b5315cbe1106e6db27c865ea55772.js": "/grillspots/precache-manifest.fa2b5315cbe1106e6db27c865ea55772.js",
+    "precache-manifest.364578d11e4bec0e1a443ce202b866f4.js": "/grillspots/precache-manifest.364578d11e4bec0e1a443ce202b866f4.js",
     "service-worker.js": "/grillspots/service-worker.js",
     "static/css/main.c799ad38.chunk.css.map": "/grillspots/static/css/main.c799ad38.chunk.css.map",
     "static/js/2.4fb2976e.chunk.js.LICENSE.txt": "/grillspots/static/js/2.4fb2976e.chunk.js.LICENSE.txt",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.aa4d0fdb.js",
     "static/js/2.4fb2976e.chunk.js",
     "static/css/main.c799ad38.chunk.css",
-    "static/js/main.e719c798.chunk.js"
+    "static/js/main.dd245743.chunk.js"
   ]
 }
