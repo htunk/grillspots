@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.map-marker-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.sheet-header-weather {
+  display: flex;
+  width: max-content;
+  margin: auto;
+}
+
+.sheet-header h1 {
+  font-weight: bold;
+}
+
+.sheet-header-weather img {
+  width: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.sheet-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-content-features {
+  display: flex;
+  width: max-content;
+  margin: 15px auto auto auto;
+}
+
+.sheet-content-features-icons {
+  width: max-content;
+  margin: auto;
+}
+
+.sheet-content-features img {
+    max-width: 20px;
+    height: 20px;
+    margin: auto;
+  }
+
+.sheet-content-features div {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px auto 5px;
+}
+
+.sheet-content-features div p {
+  text-align: center;
+}
+
+.circle-background-green {
+  background-color: #6acb67;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.circle-background-gray {
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.sheet-content-route div {
+  width: max-content;
+  height: max-content;
+  margin: 22px auto 30px auto;
+  display: flex;
+  background-color: #1dbcda;
+  border-radius: 15px;
+  padding: 10px 20px 10px 20px;
+}
+
+.sheet-content-route p {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.sheet-content-route div img {
+  width: 20px;
+  margin-left: 12px;
+  margin-bottom: -3px;
+}
