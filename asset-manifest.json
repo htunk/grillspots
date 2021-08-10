@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c799ad38.chunk.css",
-    "main.js": "/static/js/main.dd245743.chunk.js",
-    "main.js.map": "/static/js/main.dd245743.chunk.js.map",
+    "main.css": "/static/css/main.8230510e.chunk.css",
+    "main.js": "/static/js/main.2060d385.chunk.js",
+    "main.js.map": "/static/js/main.2060d385.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.203a6646.js",
     "runtime-main.js.map": "/static/js/runtime-main.203a6646.js.map",
-    "static/js/2.4fb2976e.chunk.js": "/static/js/2.4fb2976e.chunk.js",
-    "static/js/2.4fb2976e.chunk.js.map": "/static/js/2.4fb2976e.chunk.js.map",
+    "static/js/2.73e08bad.chunk.js": "/static/js/2.73e08bad.chunk.js",
+    "static/js/2.73e08bad.chunk.js.map": "/static/js/2.73e08bad.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7102e00e270a35e1479275013f9fbb7c.js": "/precache-manifest.7102e00e270a35e1479275013f9fbb7c.js",
+    "precache-manifest.751055616611777a0de5c7b0518acea7.js": "/precache-manifest.751055616611777a0de5c7b0518acea7.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.c799ad38.chunk.css.map": "/static/css/main.c799ad38.chunk.css.map",
-    "static/js/2.4fb2976e.chunk.js.LICENSE.txt": "/static/js/2.4fb2976e.chunk.js.LICENSE.txt",
+    "static/css/main.8230510e.chunk.css.map": "/static/css/main.8230510e.chunk.css.map",
+    "static/js/2.73e08bad.chunk.js.LICENSE.txt": "/static/js/2.73e08bad.chunk.js.LICENSE.txt",
     "static/media/bench-disabled.svg": "/static/media/bench-disabled.98500b55.svg",
     "static/media/bench-white.svg": "/static/media/bench-white.5cea9a30.svg",
     "static/media/grill-disabled.svg": "/static/media/grill-disabled.12d600f6.svg",
@@ -20,12 +20,17 @@
     "static/media/navigate-white.svg": "/static/media/navigate-white.e9ee5e0d.svg",
     "static/media/table-disabled.svg": "/static/media/table-disabled.f7ff2342.svg",
     "static/media/table-white.svg": "/static/media/table-white.71423df4.svg",
-    "static/media/wi-day-sunny.svg": "/static/media/wi-day-sunny.4b9869a6.svg"
+    "static/media/wi-alien.svg": "/static/media/wi-alien.531b634c.svg",
+    "static/media/wi-cloud.svg": "/static/media/wi-cloud.82408b66.svg",
+    "static/media/wi-day-sunny.svg": "/static/media/wi-day-sunny.4b9869a6.svg",
+    "static/media/wi-moon-waning-crescent-3.svg": "/static/media/wi-moon-waning-crescent-3.94f28050.svg",
+    "static/media/wi-rain.svg": "/static/media/wi-rain.e13be320.svg",
+    "static/media/wi-solar-eclipse.svg": "/static/media/wi-solar-eclipse.98ca3860.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.203a6646.js",
-    "static/js/2.4fb2976e.chunk.js",
-    "static/css/main.c799ad38.chunk.css",
-    "static/js/main.dd245743.chunk.js"
+    "static/js/2.73e08bad.chunk.js",
+    "static/css/main.8230510e.chunk.css",
+    "static/js/main.2060d385.chunk.js"
   ]
 }
