@@ -1,21 +1,67 @@
 import React from 'react';
-import sunIcon from './assets/weather/wi-day-sunny.svg';
+
 import grillIcon from './assets/features/grill-white.svg';
 import grillDisabledIcon from './assets/features/grill-disabled.svg';
 import tableIcon from './assets/features/table-white.svg';
 import tableDisabledIcon from './assets/features/table-disabled.svg';
 import benchIcon from './assets/features/bench-white.svg';
 import benchDisabledIcon from './assets/features/bench-disabled.svg';
+
 import navigationIcon from './assets/features/navigate-white.svg';
+
+import sunIcon from './assets/weather/wi-day-sunny.svg';
+import nightIcon from './assets/weather/wi-moon-waning-crescent-3.svg';
+import rainIcon from './assets/weather/wi-rain.svg';
+import cloudIcon from './assets/weather/wi-cloud.svg';
+import shadeIcon from './assets/weather/wi-solar-eclipse.svg';
+import undefinedIcon from './assets/weather/wi-alien.svg';
+
+const selectWeatherString = ( str ) => {
+    switch(str) {
+        case 'sunny':
+            return "Aurinkoista"
+        case 'rain':
+            return "Sateista"
+        case 'shade':
+            return "Varjoisaa"
+        case 'clouds':
+            return "Pilvistä"
+        case 'night':
+            return "Yö"
+        case 'undefined':
+            return "Teoriassa aurinkoista"
+        default:
+            return "Undefined"
+    }
+}
+
+const selectWeatherIcon = ( str ) => {
+    switch(str) {
+        case 'sunny':
+            return sunIcon
+        case 'rain':
+            return rainIcon
+        case 'shade':
+            return shadeIcon
+        case 'clouds':
+            return cloudIcon
+        case 'night':
+            return nightIcon
+        case 'undefined':
+            return undefinedIcon
+        default:
+            return undefinedIcon
+    }
+}
 
 const SheetHeader = (props) => {
     return (
         <div className="sheet-header">
             <h1>{props.content.name}</h1>
             <div className="sheet-header-weather">
-                <p>22 °C</p>
-                <img src={sunIcon} alt="sun" />
-                <p>Aurinkoista</p>
+                <p>{Math.round(props.weather.temperature)} °C</p>
+                <img src={selectWeatherIcon(props.content.weather)} alt="weatherIcon" />
+                <p>{selectWeatherString(props.content.weather)}</p>
             </div>
         </div>
     )

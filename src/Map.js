@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
-import addWeatherInfo from './weather';
 import './Map.css';
 import data from './data.json'
+import { addWeatherInfo } from './weather';
 
 import markerNight from './assets/markers/grill-icon-night.png';
 import markerRain from './assets/markers/grill-icon-rain.png';
@@ -17,9 +17,9 @@ mapboxgl.accessToken =
 const Map = ( props ) => {
   const mapContainerRef = useRef(null);
 
-  const [lng, setLng] = useState(24.830);
-  const [lat, setLat] = useState(60.186);
-  const [zoom, setZoom] = useState(14.75);
+  const [lng, setLng] = useState(24.833);
+  const [lat, setLat] = useState(60.189);
+  const [zoom, setZoom] = useState(14.00);
 
   // Initialize map when component mounts
   useEffect(() => {
@@ -29,7 +29,7 @@ const Map = ( props ) => {
       center: [lng, lat],
       zoom: zoom,
       maxZoom: 20,
-      minZoom: 14.75
+      minZoom: 13.00
     });
 
     map.on('move', () => {
@@ -37,11 +37,34 @@ const Map = ( props ) => {
       setLat(map.getCenter().lat.toFixed(4));
       setZoom(map.getZoom().toFixed(2));
     });
-
-    parseData({
-      map: map,
-      openSheet: props.openSheet
-    })
+    
+    // Get weather
+    const now = new Date()
+    const tenMinutesAgo = new Date(now - 60 * 60000)
+    const url = `https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&starttime=${tenMinutesAgo.toISOString()}&endtime=${now.toISOString()}&storedquery_id=fmi::observations::weather::multipointcoverage&place=otaniemi&parameters=t2m,n_man,wawa`
+    console.log(url)
+    fetch(url)
+        .then(response => response.text())
+        .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+        .then(
+            xml => {
+                const rawData = xml.getElementsByTagName("gml:doubleOrNilReasonTupleList")[0].childNodes[0].nodeValue
+                const latestObservation = rawData.trim().split('\n').pop().trim().split(' ') // [t2m, n_man]
+                const weatherObject = {
+                  temperature: parseFloat(latestObservation[0]),
+                  clouds: parseFloat(latestObservation[1]),
+                  condition: parseFloat(latestObservation[2])
+                }
+                console.log(latestObservation)
+                console.log(weatherObject)
+                props.updateWeather(weatherObject)
+                createMarkers({
+                  map: map,
+                  openSheet: props.openSheet,
+                  spots: data,
+                  weather: latestObservation
+                })
+        });
 
     // Clean up on unmount
     return () => map.remove();
@@ -69,6 +92,8 @@ const Marker = ( props ) => {
         return markerRain
       case 'shade':
         return markerShade
+      case 'clouds':
+        return markerShade
       case 'night':
         return markerNight
       default:
@@ -83,13 +108,14 @@ const Marker = ( props ) => {
   )
 }
 
-const parseData = ( args ) => {
-  console.log(data)
-  data.forEach(spot => {
-    addWeatherInfo(spot)
+const createMarkers = ( args ) => {
+  args.spots.forEach(spot => {
+    addWeatherInfo({
+      spot: spot,
+      weather: args.weather
+    })
     const markerEl = document.createElement('div')
     markerEl.className = 'map-marker'
-
     ReactDOM.render(<Marker map={args.map} 
                             openSheet={args.openSheet}
                             spot={spot}/>, markerEl)
