@@ -39,9 +39,13 @@ const Map = ( props ) => {
     });
     
     // Get weather
-    const now = new Date()
-    const tenMinutesAgo = new Date(now - 60 * 60000)
-    const url = `https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&starttime=${tenMinutesAgo.toISOString()}&endtime=${now.toISOString()}&storedquery_id=fmi::observations::weather::multipointcoverage&place=otaniemi&parameters=t2m,n_man,wawa`
+    const fiveMinutesMillis = 1000 * 60 * 5;
+    const halfHourMillis = 1000 * 60 * 30;
+    const date = new Date();
+    // Snap to nearest 5 min
+    const rounded = new Date(Math.round(date.getTime() / fiveMinutesMillis) * fiveMinutesMillis);
+    const tenMinutesAgo = new Date(rounded - halfHourMillis);
+    const url = `https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&starttime=${tenMinutesAgo.toISOString()}&endtime=${rounded.toISOString()}&storedquery_id=fmi::observations::weather::multipointcoverage&place=otaniemi&parameters=t2m,n_man,wawa`
     console.log(url)
     fetch(url)
         .then(response => response.text())
