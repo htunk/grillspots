@@ -55,14 +55,12 @@ const Map = ( props ) => {
                   clouds: parseFloat(latestObservation[1]),
                   condition: parseFloat(latestObservation[2])
                 }
-                console.log(latestObservation)
-                console.log(weatherObject)
                 props.updateWeather(weatherObject)
                 createMarkers({
                   map: map,
                   openSheet: props.openSheet,
                   spots: data,
-                  weather: latestObservation
+                  weather: weatherObject
                 })
         });
 
