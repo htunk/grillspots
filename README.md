@@ -1,7 +1,8 @@
 # Otaniemi Grillspots
 Finding a spot to grill, hangout or even work remotely has never been this easy!<br>
 Spots are visualised on a map with additional information available to help choose.<br>
-Weather information helps you decide wether you want to hang out in the sun or prefer a spot with shade.
+Weather information helps you decide wether you want to hang out in the sun or prefer a spot with shade.<br><br>
+Live at [https://grilli.app](https://grilli.app) .
 <p float="left" align="center">
   <img src="/public/phonemap.PNG?raw=true" width="400" />
   <img src="/public/phoneterrance.PNG?raw=true" width="400" /> 
