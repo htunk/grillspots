@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "@mapbox/mapbox-sdk": "^0.13.1",
     "gh-pages": "^3.2.3"
   }
 }

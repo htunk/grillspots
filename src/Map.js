@@ -11,8 +11,7 @@ import markerShade from './assets/markers/grill-icon-shade.png';
 import markerSun from './assets/markers/grill-icon-sun.png';
 import markerUndefined from './assets/markers/grill-icon-undefined.png';
 
-mapboxgl.accessToken =
-'pk.eyJ1IjoiaGFsbGl0dW5ra2kiLCJhIjoiY2tnM2xrdDJrMGJ5czJ3a3ozMzdtc2pteiJ9.m7nIrU606unNfKVqxB63ag';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 const Map = ( props ) => {
   const mapContainerRef = useRef(null);
