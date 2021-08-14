@@ -1,18 +1,25 @@
-Basic example
----
+# Otaniemi Grillspots
+Finding a spot to grill, hangout or even work remotely has never been this easy!<br>
+Spots are visualised on a map with additional information available to help choose.<br>
+Weather information helps you decide wether you want to hang out in the sun or prefer a spot with shade.<br><br>
+Live at [https://grilli.app](https://grilli.app) .
+<p float="left" align="center">
+  <img src="/public/phonemap.PNG?raw=true" width="400" />
+  <img src="/public/phoneterrance.PNG?raw=true" width="400" /> 
+</p>
 
-Initialize a map with coordinates set by React, update the state of coordinates on map movement, and display that data in an element provided by the render function.
+## Tech
+App is developed using [React with Mapbox GL JS](https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/). React was chosen over plain JS in order to easily import bottomsheet overlay as there wasn't really good options using pure JS. Whole project was made as a curiosity to test Mapbox in webdev.
 
-![Demo gif](https://i.imgur.com/IGJuTuM.gif)
+Global weather information in Otaniemi (temperature, clouds, rain) is retrieved from [FMI API](https://en.ilmatieteenlaitos.fi/open-data). Local data about sunlight and shade is calculated using [SunCalc](https://www.npmjs.com/package/suncalc) library with manually gathered environment obstacle data (obstacle heights in altitude degrees) mapped on azimuth degrees.
 
-### Run it
+## Dev
+The Mapbox style and API-key are from Mapbox dev example, you may want to change them if you are sending significant amounts or requests.
 
-    git clone https://github.com/mapbox/mapbox-react-examples.git
-
-    cd mapbox-react-examples/basic
-    npm install
-    npm start
-
-    open http://localhost:3000/
-
-Runs the app from http://localhost:3000
+Run app in development mode:
+```
+npm i
+npm start
+```
+If the site is not automatically opened, head to
+`http://localhost:3000`.
