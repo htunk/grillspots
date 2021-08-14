@@ -12,7 +12,7 @@ import markerSun from './assets/markers/grill-icon-sun.png';
 import markerUndefined from './assets/markers/grill-icon-undefined.png';
 
 mapboxgl.accessToken =
-'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
+'pk.eyJ1IjoiaGFsbGl0dW5ra2kiLCJhIjoiY2tnM2xrdDJrMGJ5czJ3a3ozMzdtc2pteiJ9.m7nIrU606unNfKVqxB63ag';
 
 const Map = ( props ) => {
   const mapContainerRef = useRef(null);
@@ -25,7 +25,7 @@ const Map = ( props ) => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/hallitunkki/ckquv6kmh0v5l17s2cnegjnmw',
       center: [lng, lat],
       zoom: zoom,
       maxZoom: 20,
