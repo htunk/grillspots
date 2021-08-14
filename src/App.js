@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { SheetHeader, SheetContent } from './SheetContent'
 import Map from './Map';
