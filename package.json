@@ -1,12 +1,13 @@
 {
   "homepage": "https://grilli.app",
   "name": "basic",
+  "private": true,
   "version": "0.1.0",
   "dependencies": {
     "mapbox-gl": "^1.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^5.0.0",
     "react-spring-bottom-sheet": "^3.4.0",
     "suncalc": "^1.8.0"
   },
