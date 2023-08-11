@@ -32,9 +32,6 @@ jobs:
     - name: Build
       run: REACT_APP_MAPBOX_ACCESS_TOKEN=$(MAPBOX_ROOT_TOKEN=${{ secrets.MAPBOX_ROOT_TOKEN }} node scripts/rotateMapboxTokens.js rotate) npm run build
 
-    - name: Add CNAME
-      run: echo "grilli.app" > build/CNAME
-
       
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
