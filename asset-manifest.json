@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/grillspots/static/css/main.027227e4.css",
-    "main.js": "/grillspots/static/js/main.478b80ad.js",
+    "main.js": "/grillspots/static/js/main.8259a92b.js",
     "static/media/og_logo.png": "/grillspots/static/media/og_logo.f2a866f880895f052340.png",
     "static/media/grill-icon-undefined.png": "/grillspots/static/media/grill-icon-undefined.ae5530117aeb128aeff2.png",
     "static/media/wi-solar-eclipse.svg": "/grillspots/static/media/wi-solar-eclipse.447e711845841cb4b76d469053acdd5e.svg",
@@ -19,10 +19,10 @@
     "static/media/navigate-white.svg": "/grillspots/static/media/navigate-white.f99503da89a400bdb0831764f19156a7.svg",
     "static/media/wi-moon-waning-crescent-3.svg": "/grillspots/static/media/wi-moon-waning-crescent-3.f1311b25d9066be055424bb72cdca6d5.svg",
     "main.027227e4.css.map": "/grillspots/static/css/main.027227e4.css.map",
-    "main.478b80ad.js.map": "/grillspots/static/js/main.478b80ad.js.map"
+    "main.8259a92b.js.map": "/grillspots/static/js/main.8259a92b.js.map"
   },
   "entrypoints": [
     "static/css/main.027227e4.css",
-    "static/js/main.478b80ad.js"
+    "static/js/main.8259a92b.js"
   ]
 }
